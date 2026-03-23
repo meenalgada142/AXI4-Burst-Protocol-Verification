@@ -1,0 +1,19 @@
+# Verilator build
+obj_dir/
+*.o
+*.d
+
+# Executables
+run_sim
+run_sim.exe
+*.out
+
+# Waveforms
+*.vcd
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
