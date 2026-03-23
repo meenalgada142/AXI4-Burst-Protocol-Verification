@@ -75,13 +75,13 @@ Built from scratch — RTL design, testbench architecture, and protocol debug in
 
 ## Waveform Verification
 
-### Write Burst — 4-beat INCR with WLAST (Test 2)
+### Write Burst — 4-beat INCR with WLAST 
 
 ![Write Burst Waveform](docs/write_channel.png)
 
 **What to verify:** AWVALID/AWREADY handshake with AWLEN=3, followed by 4 W beats where WLAST rises only on beat 3. BVALID/BREADY completes with BRESP=OKAY.
 
-### Read Burst — 4-beat INCR with RLAST (Test 3)
+### Read Burst — 4-beat INCR with RLAST 
 
 ![Read Burst Waveform](docs/read_channel.png)
 
