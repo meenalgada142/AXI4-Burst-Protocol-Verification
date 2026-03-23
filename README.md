@@ -77,21 +77,15 @@ Built from scratch — RTL design, testbench architecture, and protocol debug in
 
 ### Write Burst — 4-beat INCR with WLAST (Test 2)
 
-![Write Burst Waveform](docs/write_burst_waveform.png)
+![Write Burst Waveform](docs/write_channel.png)
 
 **What to verify:** AWVALID/AWREADY handshake with AWLEN=3, followed by 4 W beats where WLAST rises only on beat 3. BVALID/BREADY completes with BRESP=OKAY.
 
 ### Read Burst — 4-beat INCR with RLAST (Test 3)
 
-![Read Burst Waveform](docs/read_burst_waveform.png)
+![Read Burst Waveform](docs/read_channel.png)
 
 **What to verify:** ARVALID/ARREADY handshake with ARLEN=3, then 4 R beats with RDATA incrementing (`CAFE0001→0004`). RLAST=0 on beats 0–2, RLAST=1 on beat 3. RID=1 constant across all beats.
-
-### WLAST Protocol Error Detection (Test 8)
-
-![WLAST Error Waveform](docs/wlast_error_waveform.png)
-
-**What to verify:** WLAST asserts on beat 2 (should be beat 3). Slave terminates burst immediately — WREADY drops, BRESP=SLVERR.
 
 ---
 
